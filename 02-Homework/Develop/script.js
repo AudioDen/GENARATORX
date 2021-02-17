@@ -21,11 +21,14 @@ function generatePassword() {
   var uppercaseCheck = confirm("Do you want to include uppercase characters?")
   var numberCheck = confirm("Do you want to include number characters?")
   var specialCheck = confirm("Do you want to include special characters?")
+  var scoreDash = confirm("Do you want underscore and dash?")
 
-  var lowercaseArr = ["a","b"]
-  var uppercaseArr = ["A","B"]
-  var numberArr = ["1","2"]
-  var specialArr = ["$","#"]
+
+  var lowercaseArr = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
+  var uppercaseArr = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"]
+  var numberArr = ["1","2","3","4","5","6","7","8","9","0"]
+  var specialArr = ["!","@","#","$","%","^","&","*","(",")","<",">","?","|","{","}","[","]",]
+  var scoreDashArr = ["_","-"]
 
   var optionArr = [];
 
@@ -38,10 +41,16 @@ function generatePassword() {
     optionArr = optionArr.concat(uppercaseArr)
   }
   if(numberCheck == true){
-    console.log(numberArr)
+    //console.log(numberArr)
+    optionArr = optionArr.concat(numberArr)
   }
   if(specialCheck == true){
-    console.log(specialArr)
+    //console.log(specialArr)
+    optionArr = optionArr.concat(specialArr)
+  }
+  if(scoreDash == true){
+    //console.log(specialArr)
+    optionArr = optionArr.concat(scoreDashArr)
   }
 
   console.log(optionArr)
