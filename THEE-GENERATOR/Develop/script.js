@@ -1,6 +1,5 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");//  the password button
-
 // Write password to the #password  input in textarea
 function writePassword() {
   var password = generatePassword(); 
@@ -13,22 +12,11 @@ function writePassword() {
 function generatePassword() {
   var characterLength = prompt("How long do you want your password to be? (8-128 characters)")
 
-//below sets the condition for madatory answer of first prompt
-  if (characterLength < 8 || characterLength > 128 ){
-    characterLength = prompt("You broke the rules, character length MUST be between 8 and 128")
- }
-  if (characterLength === lowercaseArr){
-  characterLength = prompt("You broke the rules, character length  MUST be between 8 and 128 using numbers")
- }
-  if (characterLength === uppercaseArr){
-  characterLength = prompt("You broke the rules, character length  MUST be between 8 and 128 using numbers")
- }
-  if (characterLength === specialArr){
-  characterLength = prompt("You broke the rules, character length  MUST be between 8 and 128 using numbers")
- } 
-  if (characterLength === scoreDashArr){
-  characterLength = prompt("You broke the rules, character length  MUST be between 8 and 128 using numbers")
- }
+
+ while (isNaN(characterLength)  || characterLength < 8 || characterLength > 128){characterLength = prompt("You broke the rules, character length MUST be between 8 and 128")
+}
+ 
+  
 // below follow up prompts to begin the build of password (these have no loops so cancel can be a answer and script continues)
   var lowercaseCheck = confirm("Do you want to include lowercase characters?")
   var uppercaseCheck = confirm("Do you want to include uppercase characters?")

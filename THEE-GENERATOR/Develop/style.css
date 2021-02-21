@@ -82,7 +82,7 @@ h2 {
 .btn {
   border: none;
   background-color: hsl(360, 91%, 36%);
-  border-radius: 25px;
+  border-radius: 5px;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 6px 0px rgba(0, 0, 0, 0.2) 0px 1px 1px
     0px;
   color: hsl(0, 0%, 100%);
@@ -119,8 +119,8 @@ button[disabled] {
   text-align: center;
   margin-top: 10px;
   margin-bottom: 10px;
-  border: 2px dashed #c0c7cf;
-  border-radius: 6px;
+ 
+  border-radius: 50px;
   resize: none;
   overflow: hidden;
 }
