@@ -11,11 +11,9 @@ function writePassword() {
 // start password function  (leading prompt)
 function generatePassword() {
   var characterLength = prompt("How long do you want your password to be? (8-128 characters)")
-
-
+//below leading prompt conditional statement
  while (isNaN(characterLength)  || characterLength < 8 || characterLength > 128){characterLength = prompt("You broke the rules, character length MUST be between 8 and 128")
 }
- 
   
 // below follow up prompts to begin the build of password (these have no loops so cancel can be a answer and script continues)
   var lowercaseCheck = confirm("Do you want to include lowercase characters?")
